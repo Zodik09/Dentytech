@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --border-color: #313D45;
+    --right-bgcolor: #222E35;
+    --left-bgcolor: #202C33;
+}
+
+body {
+    background-color: var(--right-bgcolor);
+}
+
+#whole {
+    display: flex;
+}
+
+/* ------------------Whole Document------------------ */
+.left::-webkit-scrollbar{
+    display: none;
+}
+.left {
+    width: 40vw;
+    height: 100vh;
+    background-color: var(--left-bgcolor);
+    border-right: 1px solid var(--border-color);
+    overflow: auto;
+}
+
+/* ------------------ Top Navigation------------------ */
+header {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    max-height: 59px;
+    margin: 0px;
+    background-color: var(--left-bgcolor);
+}
+
+nav {
+    padding: 10px 16px;
+    display: flex;
+}
+
+.nav-lists {
+    display: flex;
+}
+
+.nav-icons {
+    padding: 8px;
+    height: 40px;
+    width: 40px;
+    color: #AEBAC1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.nav-lists {
+    display: flex;
+}
+
+.mylogo {
+    height: 40px;
+    padding: 0px 131px 0px 0px;
+}
+
+.mylogo img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* ------------------Main Content------------------ */
+.container {
+    background-color: #111B21;
+}
+
+/* ------Search Box------ */
+
+.search-box {
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 12px;
+    position: sticky;
+    background-color: #111B21;
+    top: 60px;
+}
+
+.search-icon {
+    height: 24px;
+    cursor: pointer;
+    width: 24px;
+}
+
+.search {
+    background-color: var(--left-bgcolor);
+    color: white;
+    position: sticky;
+    top: 60px;
+}
+
+.bar {
+    cursor: text;
+    width: 439px;
+    height: 35px;
+    display: flex;
+    background-color: var(--left-bgcolor);
+    border-radius: 10px;
+    padding: 5px 28px 5px 13px;
+    color: #8696A0;
+    position: sticky;
+    top: 60px;
+}
+
+.search-para {
+    color: #8696A0;
+    font-size: 88%;
+    padding: 1.4px 33px 1.4px 28px;
+}
+
+.chat-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8696A0;
+    cursor: pointer;
+    height: 49px;
+    width: 49px;
+}
+
+.chat-filter .outer-box {
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px;
+}
+
+.chat-filter .outer-box .inner-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+}
+
+.chat-filter .outer-box .inner-box svg {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+/* ------Archive------ */
+.archive {
+    display: flex;
+    color: white;
+}
+
+.archive .outer-box {
+    color: #00a884;
+    width: 77px;
+    height: 49px;
+    padding: 0px 14px;
+}
+
+.archive .inner-box {
+    height: 49px;
+    width: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archive .outer-box .inner-box svg {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+
+.archived {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 397px;
+    height: 49px;
+    padding: 0px 15px 0px 0px;
+}
+
+/* ------Chats------ */
+
+.dp {
+    height: 73px;
+    width: 77px;
+    padding: 14px 13px 14px 12px;
+    cursor: pointer;
+}
+
+.dp img {
+    height: 49px;
+    cursor: pointer;
+    width: 49px;
+    border-radius: 50%;
+}
+
+.chats {
+    width: 100%;
+    cursor: pointer;
+    height: 72px;
+    background-color: #111B21;
+    display: flex;
+}
+
+.message {
+    color: white;
+    font-size: 17px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--border-color);
+    border-width: 75%;
+    cursor: pointer;
+    width: 395px;
+    padding: 0px 15px 0px 0px;
+}
+.message p:nth-child(2){
+    color: #8696A0;
+    font-size: 14px;
+}
+
+/* -----------------------Right----------------------- */
+.right {
+    width: 60vw;
+    height: 100%;
+    margin: auto;
+    height: 70vh;
+    padding: 75px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-info {
+    position: fixed;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-info .right-img svg {
+    margin-bottom: 40px;
+}
+
+.right-info h1 {
+
+    font-size: 32px;
+    color: #D1D6D8;
+    display: block;
+    font-style: normal;
+    font-weight:lighter;
+    font-family: Arial, sans-serif;
+}
+
+.right-info p {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8696a0;
+    line-height: 20px;
+    text-align: center;
+}
+
+.right-info .protect svg {
+    gap: 5px;
+    color: #8696a0;
+    margin-right: 2px;
+    margin-bottom: 3px;
+}
+
+.right-info .protect {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 14px;
+    width: 100%;
+}
