@@ -117,24 +117,188 @@ footer {
     align-items: center;
 }
 
-footer> .para >p:first-child {
+footer>.para>p:first-child {
     color: red;
     font-size: xx-large;
     font-weight: bolder;
 }
 
-footer > .para >p:nth-child(2) {
+footer>.para>p:nth-child(2) {
     font-size: small;
     font-weight: bolder;
 }
-.social > .svgs{
+
+.social>.svgs {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: rgb(124, 123, 24);
 }
-.social p{
+
+.social p {
     font-size: small;
     font-weight: 900;
+}
+
+@media only screen and (1090px < width < 1177px) {
+    #message {
+        font-size: 120px;
+    }
+    .images img {
+        height: 380px;
+    }
+}
+@media only screen and (1001px < width < 1090px) {
+    #message {
+        font-size: 110px;
+    }
+    .images img {
+        height: 360px;
+    }
+}
+@media only screen and (915px < width < 1001px) {
+    #message {
+        font-size: 100px;
+    }
+    .images img {
+        height: 340px;
+    }
+}
+@media only screen and (829px < width < 915px) {
+    #message {
+        font-size: 90px;
+    }
+    .images img {
+        height: 320px;
+    }
+}
+@media only screen and (739px < width < 829px) {
+    #message {
+        font-size: 80px;
+    }
+    .images img {
+        height: 300px;
+    }
+}
+@media only screen and (653px < width < 739px) {
+    #message {
+        font-size: 70px;
+    }
+    .images img {
+        height: 280px;
+    }
+}
+@media only screen and (567px < width < 653px) {
+    #message {
+        font-size: 60px;
+    }
+    .images img {
+        height: 260px;
+    }
+}
+@media only screen and (477px < width < 567px) {
+    #message {
+        font-size: 50px;
+    }
+    .images img {
+        height: 240px;
+    }
+    #left a {
+        padding: 2px 3px;
+    }
+    #menu {
+        padding: 2px 6px;
+    }
+    #center h1{
+        font-size: 1.3rem;
+    }
+    #center svg {
+        padding: 3px;
+        height: 35px;
+        width: 35px;
+    }
+    #right button {
+        padding: 6px 12px;
+        font-weight: bolder;
+    }
+}
+
+@media only screen and (391px < width < 477px) {
+    #message {
+        font-size: 40px;
+    }
+    .images img {
+        height: 220px;
+    }
+    #left a {
+        padding: 1px 2px;
+    }
+    #menu {
+        padding: 1px 4px;
+    }
+    #center h1{
+        font-size: 1.1rem;
+    }
+    #center svg {
+        padding: 2px;
+        height: 30px;
+        width: 30px;
+    }
+    #right button {
+        padding: 4px 10px;
+        font-weight: bolder;
+    }
+}
+@media only screen and (345px < width < 391px) {
+    #message {
+        font-size: 30px;
+    }
+    .images img {
+        height: 200px;
+    }
+    #left a{
+        padding: 1px 1px;
+    }
+    #menu {
+        padding: 1px 2px;
+    }
+    #center h1{
+        font-size: 1rem;
+    }
+    #center svg {
+        padding: 1px;
+        height: 20px;
+        width: 20px;
+    }
+    #right button {
+        padding: 2px 6px;
+        font-weight: bolder;
+    }
+}
+@media only screen and (0px < width < 345px) {
+    #message {
+        font-size: 30px;
+    }
+    .images img {
+        height: 200px;
+    }
+    #left a{
+        padding: 1px 1px;
+    }
+    #menu {
+        padding: 1px 2px;
+    }
+    #center h1{
+        font-size: 1rem;
+    }
+    #center svg {
+        padding: 1px;
+        height: 20px;
+        width: 20px;
+    }
+    #right button {
+        padding: 2px 6px;
+        font-weight: bolder;
+    }
 }
