@@ -6,11 +6,14 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+body::-webkit-scrollbar{
+    display: none;
+}
 :root {
     --font-color: rgb(0, 0, 0);
 }
-
+/* ---------------Header Start--------------- */
+/* ---------------NavBar--------------- */
 header {
     width: 90vw;
     margin: auto;
@@ -36,6 +39,7 @@ header nav ul li img {
     height: auto;
 }
 
+/* ---------------NavBar Logo--------------- */
 #logo:first-child {
     margin-right: auto;
     margin-top: 10px;
@@ -50,7 +54,9 @@ header nav ul li img {
 nav ul li a svg {
     margin: 10px 0px 0px 0px;
 }
+/* ---------------Header End--------------- */
 
+/* ---------------Main Start--------------- */
 main {
     display: flex;
     justify-content: center;
@@ -125,6 +131,7 @@ main {
 }
 
 /* ------------------Buttons for different languages------------------ */
+/* ---------------Multiple Language Download Buttons--------------- */
 .languages {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -162,4 +169,166 @@ main {
 }
 .languages> .box > .right{
     background-color: #5CB85C;
+}
+.container-2{
+    width: 100vw;
+    min-height: 100vh;
+    /* border: 2px solid rgb(249, 167, 167); */
+    padding: 20px;
+    background-color: #222222;
+}
+/* ---------------Main End--------------- */
+
+/* ---------------Container 2 Start--------------- */
+.container-2 .top{
+    width: 80vw;
+    /* border: 2px solid rgb(249, 167, 67); */
+    margin: 50px auto;
+}
+.container-2 .newsletter{
+    display: flex;
+}
+.container-2 .newsletter .text{
+    /* border: 2px solid firebrick; */
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.container-2 .newsletter .form{
+    width: 30vw;
+    margin: auto;
+    height: 50vh;
+    /* border: 2px solid fuchsia; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 40px;
+}
+.container-2 .newsletter .form> h3{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #00B6D1;
+    margin-bottom: 40px;
+}
+.container-2 .newsletter .form label{
+    font-weight: 350;
+    margin-bottom: 5px;
+}
+.container-2 .newsletter .form input{
+    width: 23vw;
+    height: 10vh;
+    border: 1px solid rgb(222, 222, 222);
+}
+.form>button{
+    background-color: #00B6D1;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    width: 23vw;
+    height: 10vh;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0px 5px 10px #D5EBFC;
+}
+.bottom{
+    margin-top: 100px;
+    color: white;
+}
+.bottom>h3{
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.bottom:nth-child(2){
+    line-height: 40px;
+}
+.bottom a{
+    color: #00B6D1;
+}
+/* ---------------Container 2 End--------------- */
+
+/* ---------------Container 3 Start--------------- */
+.container-3{
+    width: 80vw;
+    margin: 90px auto 10px auto;
+}
+.container-3 .inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col h3{
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.col ul{
+    line-height: 25px;
+}
+.col li{
+    font-size: 0.9em;
+    font-weight: 350;
+}
+.col p{
+    margin-bottom: 5px;
+}
+.col input::placeholder{
+    padding-left: 10px;
+}
+.col-4 input{
+    height: 7vh;
+    width: 18vw;
+}
+.col-4 button{
+    background-color: #00B6D1;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    width: 18vw;
+    height: 7vh;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* -----------------Footer----------------- */
+footer{
+    width: 80vw;
+    margin: 50px auto;
+}
+footer nav ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+.footer-logo:first-child{
+    margin-right: auto;
+}
+footer img{
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+footer p{
+    font-size: 0.7em;
+}
+
+footer li svg{
+    height: 1.5em;
+}
+/* -----------------Media Queries-----------------   */
+@media screen and (0px<width<600px){
+    .languages {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .container-2 .newsletter{
+        flex-direction: column;
+    }
+    .container-3 .inner{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 30px;
+    }
 }
