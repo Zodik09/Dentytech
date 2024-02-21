@@ -6,12 +6,15 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
+
 :root {
     --font-color: rgb(0, 0, 0);
 }
+
 /* ---------------Header Start--------------- */
 /* ---------------NavBar--------------- */
 header {
@@ -19,7 +22,7 @@ header {
     margin: auto;
 }
 
-header nav ul {
+header>nav>ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -54,6 +57,25 @@ header nav ul li img {
 nav ul li a svg {
     margin: 10px 0px 0px 0px;
 }
+
+/* -----------------------Baad main kaam karunga ispar, yahan se start karna hai----------------------- */
+/* About main hover effect lagana hai */
+/* .sub-about{
+    position: absolute;
+    background-color: #212121;
+    height: 35vh;
+    width: 16vw;
+    color: white;
+    line-height: 40px;
+    /* transform: translateX(-14px) translateY(30px);
+    text-align: left;
+    padding-left: 10px;
+}
+.sub-about>li{
+    border-bottom: 1px solid rgb(45, 45, 45);
+}
+*/
+
 /* ---------------Header End--------------- */
 
 /* ---------------Main Start--------------- */
@@ -149,12 +171,14 @@ main {
     font-size: 1.2em;
     padding: 10px;
 }
-.languages>.box>h3{
+
+.languages>.box>h3 {
     font-size: 0.8em;
     font-weight: 400;
     padding: 0px 0px 15px 0px;
 }
-.languages> .box > .btn{
+
+.languages>.box>.btn {
     color: white;
     display: inline-block;
     /* border: 2px solid maroon; */
@@ -164,38 +188,55 @@ main {
     font-weight: 700;
     gap: 10px;
 }
-.languages> .box > .left{
+
+.languages>.box>.left:hover {
+    background-color: #09A6BD;
+    transition: 0.2s linear;
+}
+
+.languages>.box>.right:hover {
+    background-color: #81C780;
+    transition: 0.2s linear;
+}
+
+.languages>.box>.left {
     background-color: #00B6D1;
 }
-.languages> .box > .right{
+
+.languages>.box>.right {
     background-color: #5CB85C;
 }
-.container-2{
+
+.container-2 {
     width: 100vw;
     min-height: 100vh;
     /* border: 2px solid rgb(249, 167, 167); */
     padding: 20px;
     background-color: #222222;
 }
+
 /* ---------------Main End--------------- */
 
 /* ---------------Container 2 Start--------------- */
-.container-2 .top{
+.container-2 .top {
     width: 80vw;
     /* border: 2px solid rgb(249, 167, 67); */
     margin: 50px auto;
 }
-.container-2 .newsletter{
+
+.container-2 .newsletter {
     display: flex;
 }
-.container-2 .newsletter .text{
+
+.container-2 .newsletter .text {
     /* border: 2px solid firebrick; */
     color: white;
     text-align: center;
     margin: auto;
     width: 50%;
 }
-.container-2 .newsletter .form{
+
+.container-2 .newsletter .form {
     width: 30vw;
     margin: auto;
     height: 50vh;
@@ -207,22 +248,26 @@ main {
     border-radius: 15px;
     padding: 40px;
 }
-.container-2 .newsletter .form> h3{
+
+.container-2 .newsletter .form>h3 {
     font-size: 1.5em;
     font-weight: 400;
     color: #00B6D1;
     margin-bottom: 40px;
 }
-.container-2 .newsletter .form label{
+
+.container-2 .newsletter .form label {
     font-weight: 350;
     margin-bottom: 5px;
 }
-.container-2 .newsletter .form input{
+
+.container-2 .newsletter .form input {
     width: 23vw;
     height: 10vh;
     border: 1px solid rgb(222, 222, 222);
 }
-.form>button{
+
+.form>button {
     background-color: #00B6D1;
     color: white;
     font-size: 1em;
@@ -234,53 +279,66 @@ main {
     margin-top: 15px;
     box-shadow: 0px 5px 10px #D5EBFC;
 }
-.bottom{
+
+.bottom {
     margin-top: 100px;
     color: white;
 }
-.bottom>h3{
+
+.bottom>h3 {
     font-size: 1.4em;
     font-weight: 400;
 }
-.bottom:nth-child(2){
+
+.bottom:nth-child(2) {
     line-height: 40px;
 }
-.bottom a{
+
+.bottom a {
     color: #00B6D1;
 }
+
 /* ---------------Container 2 End--------------- */
 
 /* ---------------Container 3 Start--------------- */
-.container-3{
+.container-3 {
     width: 80vw;
     margin: 90px auto 10px auto;
 }
-.container-3 .inner{
+
+.container-3 .inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.col h3{
+
+.col h3 {
     font-size: 0.9em;
     margin-bottom: 20px;
 }
-.col ul{
+
+.col ul {
     line-height: 25px;
 }
-.col li{
+
+.col li {
     font-size: 0.9em;
     font-weight: 350;
 }
-.col p{
+
+.col p {
     margin-bottom: 5px;
 }
-.col input::placeholder{
+
+.col input::placeholder {
     padding-left: 10px;
 }
-.col-4 input{
+
+.col-4 input {
     height: 7vh;
     width: 18vw;
 }
-.col-4 button{
+
+.col-4 button {
     background-color: #00B6D1;
     color: white;
     font-size: 1em;
@@ -293,42 +351,85 @@ main {
 }
 
 /* -----------------Footer----------------- */
-footer{
+footer {
     width: 80vw;
     margin: 50px auto;
 }
-footer nav ul{
+
+footer nav ul {
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 10px;
 }
-.footer-logo:first-child{
+
+.footer-logo:first-child {
     margin-right: auto;
 }
-footer img{
+
+footer img {
     width: 160px;
     margin-bottom: 20px;
 }
 
-footer p{
+footer p {
     font-size: 0.7em;
 }
 
-footer li svg{
+footer li svg {
     height: 1.5em;
+    color: black;
+    margin: 0px 7px;
 }
+
+footer li svg:nth-child(odd){
+    position: relative;
+    z-index: -1;
+}
+footer li svg:nth-child(even){
+    position: relative;
+    z-index: 1;
+}
+footer li svg:hover {
+    height: 1.6em;
+    transform: scale3d(1.6em);
+    transition: transform 2s ease-in;
+}
+
+/* ---------------Cursor Pointer for whole website--------------- */
+header nav ul li,
+.languages .box .btn,
+.form button,
+.col ul li,
+.col-4 button,
+footer li svg {
+    cursor: pointer;
+}
+
 /* -----------------Media Queries-----------------   */
-@media screen and (0px<width<600px){
+@media screen and (0px<width<600px) {
     .languages {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    .container-2 .newsletter{
+
+    .container-2 .newsletter {
         flex-direction: column;
     }
-    .container-3 .inner{
+
+    .container-3 .inner {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 30px;
     }
+}
+footer span:last-child{
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #2D2D2D;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.7em;
 }
