@@ -1,0 +1,153 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #111111;
+    color: #F2F2F2;
+}
+
+nav {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav #pages li {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 0px;
+    padding-right: 20px;
+}
+
+nav #social li {
+    padding-left: 20px;
+}
+
+#logo {
+    width: 75vw;
+    height: 25vh;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding: 45px 0px;
+}
+
+#logo img {
+    height: 2.2em;
+}
+
+.navBar {
+    background-color: #F2F2F2;
+}
+
+.navContainer {
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navContainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navContainer ul li {
+    padding: 15px 30px 15px 0px;
+    font-size: 14px;
+}
+
+.search {
+    font-weight: 600;
+}
+
+.boxes {
+    display: grid;
+    grid-template-areas: "box1 box2 box3"
+                         "box1 box2 box4";
+    /* background-color: rebeccapurple; */
+    gap: 10px 12px;
+    width: 75vw;
+    margin: 30px auto;
+    color: white;
+    position: relative;
+}
+.box{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.box1 {
+    background-color: green;
+    grid-area: box1;
+    height: 320px;
+    width: 450px;
+}
+
+.box2 {
+    background-color: burlywood;
+    grid-area: box2;
+    height: 320px;
+    width: 250px;
+}
+
+.box3 {
+    background-color: aqua;
+    grid-area: box3;
+    height: 155px;
+    width: 250px;
+}
+
+.box4 {
+    background-color: aquamarine;
+    grid-area: box4;
+    height: 155px;
+    width: 250px;
+}
+
+.boxes .box span {
+    font-size: 0.7em;
+}
+
+.box h1 {
+    font-size: 1.4em;
+}
+
+.box h2 {
+    font-size: 1em;
+}
+.box span:first-child{
+    border-radius: 2px;
+    border: 1px solid white;
+    padding: 2px 6px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: aquamarine;
+    height: 10vh;
+}
