@@ -11,7 +11,9 @@ body {
     width: 100%;
     height: 100%;
 }
-
+:root{
+    --bodr-clr: #EAEAEA;
+}
 header {
     background-color: #111111;
     color: #F2F2F2;
@@ -148,6 +150,36 @@ nav #social li {
 .grid{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    background-color: aquamarine;
     height: 10vh;
+    width: 75vw;
+    margin: auto;
+}
+.internet,
+.security,
+.recentPosts,
+.socialPlugin,
+.popularPosts,
+.featuredPost,
+.android,
+.labels{
+    border-bottom: 3px solid var(--bodr-clr);
+}
+.left h2, .right h2{
+    text-decoration: underline;
+    text-decoration-color: red; 
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2.5px;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+}
+.internet,
+.security,
+.recentPosts{
+width: 95%;
+display: flex;
+justify-content: space-between;
+}
+.left>div>span{
+    color: grey;
+    font-size: 0.85em;
 }
