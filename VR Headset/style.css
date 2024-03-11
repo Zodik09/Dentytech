@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: #E0E5EB;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    height: 200px;
+    /* max-height: 1000px; */
+}
+
+.vertBox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-60%, -0%);
+    background-image: url("https://images01.nicepage.com/thumbs/c461c07a441a5d220e8feb1a/6f0130fe993058f4a7d22178/001_150.png");
+    width: 500px;
+    height: 1000px;
+    /* margin-top: auto; */
+    z-index: 0;
+}
+
+.horiBox {
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, 30%);
+    min-width: 100vw;
+    height: 300px;
+    /* margin-left: auto; */
+    background-color: #77AAD9;
+    z-index: 1;
+}
+
+.centerBox {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 2;
+    width: 800px;
+    height: 700px;
+    border-radius: 50px;
+    background-color: #478AC9;
+}
+.image{
+    position: absolute;
+    z-index: 3;
+    top: 30%;
+    left: 10%;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px #575757;
+}
+.image img{
+    object-fit: cover;
+    object-position: 70% 50%;
+    width: 600px;
+    height: 600px;
+}
+.text{
+    position: absolute;
+    top: 160%;
+    left: 40%;
+    z-index: 4;
+    background-color: white;
+    width: 650px;
+    height: 650px;
+    border-radius: 10%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 0px 20px 0px #575757;
+}
+.text h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 4em;
+}
+.text p{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    font-size: 1.2em;
+        font-weight: 200;
+        margin: 40px 0px 50px 0px;
+    }
+    .text span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+       
+.text span:nth-child(3):after{
+    content: "Freepik";
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text span::after:hover{
+    text-decoration: none;
+}
+
+.button{
+    margin: 50px 0px;
+    background-color: transparent;
+    border: 2px solid #ADCCE9;
+    border-radius: 30px;
+    padding: 15px 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
