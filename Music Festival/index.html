@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Festival</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Roboto&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: "Hind Madurai", sans-serif;
+        }
+
+        :root{
+            --theme-clr: #5626C4;
+            --font-clr: white;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background-color: black;
+            color: var(--font-clr);
+        }
+
+        .topPara {
+            display: flex;
+            justify-content: flex-end;
+            padding: 50px 60px;
+            font-size: large;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: 2px;
+        }
+
+        .heading{
+            padding: 100px;
+            position: relative;
+        }
+        .heading h1{
+            font-size: 4em;
+            font-weight: 900;
+        }
+        .heading p{
+            font-size: large;
+            letter-spacing: 2px;
+        }
+        .circle{
+            border-radius: 50%;
+            background-color: var(--theme-clr);
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topPara">
+        <p>Locals love them all, but French <br> Quarter Fest, a free huzzah to <br> homegrown musical talent, is a New
+            <br> Orleans favorite.
+        </p>
+    </div>
+    <div class="heading">
+        <h1>PARTY MINIMAL</h1>
+        <p>Music plays a leading role in New Orleans, the city that brought jazz into the world. And while <br> traditional jazz is revered here, New Orleans is tuned into all kinds of music expression.The calendar <br> is dotted with music celebrations both epic and homespun.</p>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
