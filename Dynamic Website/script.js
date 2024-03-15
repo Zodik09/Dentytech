@@ -98,6 +98,7 @@ createCard("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIo
 createCard("https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU_sVj4Cw273EE2dnVxk_GeeDocQ", "Your First HTML Website | Sigma Web Development Course - Tutorial #2", "10000", "9 months old", "28:31", "https://youtu.be/kJEsTjH5mVg?si=cii4tVXkfyJpMqIF");
 createCard("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw", "Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1", "100000", "10 months old", "31:20", "https://youtu.be/tVzUXW6siu0?si=V6Wtp6quirldY9fB");
 createCard("https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU_sVj4Cw273EE2dnVxk_GeeDocQ", "Your First HTML Website | Sigma Web Development Course - Tutorial #2", "1000000", "9 months old", "28:31", "https://youtu.be/kJEsTjH5mVg?si=cii4tVXkfyJpMqIF");
+createCard("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw", "Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1", "100000", "10 months old", "31:20", "https://youtu.be/tVzUXW6siu0?si=V6Wtp6quirldY9fB");
 
 // let dot2 = document.getElementsByClassName("dot2")
 // if(views<10){
