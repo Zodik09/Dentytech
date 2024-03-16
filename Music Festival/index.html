@@ -4,70 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
     <title>Music Festival</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Roboto&display=swap');
-
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            list-style: none;
-            font-family: "Hind Madurai", sans-serif;
-        }
-
-        :root{
-            --theme-clr: #5626C4;
-            --font-clr: white;
-        }
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            background-color: black;
-            color: var(--font-clr);
-        }
-
-        .topPara {
-            display: flex;
-            justify-content: flex-end;
-            padding: 50px 60px;
-            font-size: large;
-            font-weight: 300;
-            font-style: normal;
-            letter-spacing: 2px;
-        }
-
-        .heading{
-            padding: 100px;
-            position: relative;
-        }
-        .heading h1{
-            font-size: 4em;
-            font-weight: 900;
-        }
-        .heading p{
-            font-size: large;
-            letter-spacing: 2px;
-        }
-        .circle{
-            border-radius: 50%;
-            background-color: var(--theme-clr);
-            height: 400px;
-            width: 400px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-    </style>
 </head>
 
 <body>
+    <button id="btn">Change Background Color</button>
     <div class="topPara">
         <p>Locals love them all, but French <br> Quarter Fest, a free huzzah to <br> homegrown musical talent, is a New
             <br> Orleans favorite.
@@ -75,9 +18,100 @@
     </div>
     <div class="heading">
         <h1>PARTY MINIMAL</h1>
-        <p>Music plays a leading role in New Orleans, the city that brought jazz into the world. And while <br> traditional jazz is revered here, New Orleans is tuned into all kinds of music expression.The calendar <br> is dotted with music celebrations both epic and homespun.</p>
+        <p>Music plays a leading role in New Orleans, the city that brought jazz into the world. And while <br>
+            traditional jazz is revered here, New Orleans is tuned into all kinds of music expression.The calendar <br>
+            is dotted with music celebrations both epic and homespun.</p>
         <div class="circle"></div>
+        <div class="rectangle"></div>
     </div>
+    <div class="center">
+        <img src="./boy praying.jpg" alt="Boy is Praying">
+        <div class="centerText">
+            <h1>MUSIC FESTIVALS</h1>
+            <p>Spring’s Jazz and Heritage Festival (Jazz Fest) may be the best <br> known, but hordes of soul, R&B and
+                hip
+                hop fans attend <br> Essence over Fourth of July weekend and Voodoo Music + Arts <br> Experience brings
+                indie
+                rock,
+                punk and metal to City Park over <br> Halloween weekend.</p>
+            <ul class="socialLinks">
+                <li><i class="ri-facebook-fill"></i></li>
+                <li><i class="ri-twitter-fill"></i></li>
+                <li><i class="ri-instagram-fill"></i></li>
+                <li><i class="ri-pinterest-fill"></i></li>
+                <li><i class="ri-youtube-fill"></i></li>
+            </ul>
+            <div class="speaker">
+                <img src="./speaker.jpg" alt="speaker">
+                <p>Blues is on the menu at the Crescent City <br> Blues & BBQ Fest, while all things Louis <br>
+                    Armstrong is heralded during August’s.</p>
+                <div class="partyFont">
+                    <img src="./party font.png" alt="party font">
+                </div>
+            </div>
+            <div class="blueRect"></div>
+        </div>
+    </div>
+    <div class="bottomText">
+        <div>
+            <h1>MUSIC <br> FESTIVALS NOT <br> TO MISS</h1>
+            <p>New Orleans Jazz and Heritage <br> Festival will make your ears smile. <br> And then there’s the food.
+            </p>
+        </div>
+        <div>
+            <p>Get ready for the best of R&B, hip-hop, jazz <br> and more at 2018 ESSENCE Festival&reg; <br> Presented
+                By Coca-Cola&reg; - the premier <br> showcase for contemporary African American <br> music and culture.
+                Held over Fourth of July <br> weekend at the Mercedes-Benz Superdome, <br> this three-day party named
+                for its founder <br> and sponsoring magazine, combines high- <br> octane music performances with <br>
+                inspirational speakers and provocative <br> conversations about race, gender, <br> culture, and art.</p>
+        </div>
+    </div>
+    <div class="bottomImg">
+        <img src="./boy playing guitar.png" alt="Boy playing guitar">
+        <img src="./boy holding mic.jpeg" alt="Boy holding mic">
+        <div class="blueCircle"></div>
+    </div>
+    <div class="backgroudText">
+        <div>
+            <h1>BACKGROUND</h1>
+            <P>Essence Magazine has made New Orleans home to the highly <br> sought after concert series since the early
+                1990s. </P>
+        </div>
+        <div>
+            <p>Each year, the festival brings in the best <br> performers and entertainers in the country, as well <br>
+                as a series of seminars created to empower African <br> American men and women.</p>
+        </div>
+    </div>
+    <div class="singing">
+        <img src="./Boy Singing.jpg" alt="Boy Singing" class="sing">
+        <div class="horiRect"></div>
+        <h1>EXPERIENCES</h1>
+        <p>In addition to hearing live music from these world famous <br> performers, you can participate in the 2018
+            Free Daytime <br> Experiences. The features some of the most knowledgeable <br> experts sharing their ideas
+            on how to better communities, <br> while Essence Path to Power features experts sharing tips on <br>
+            pursuing personal success.</p>
+        <img src="./mic.jpeg" alt="Mic" class="mic">
+        <div class="contactDiv">
+            <img src="contact.png" alt="contact" class="contactFont">
+        </div>
+    </div>
+    <div class="form">
+        <form>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <input type="email" name="email" id="email" placeholder="Enter a valid email address">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <button>submit</button>
+        </form>
+    </div>
+    <div class="bottomPara">
+        <p>Jun 13 - Jun 16 2019 Manchester, <br>
+            Tennessee (Great Stage Park) <br>
+            $319-$349 (GA); $825 (VIP)</p>
+        <p>Being a member of the gives you <br> some sweet perks. You'll get official <br> updates throughout the year,
+            super- <br>special deals, contests, artist <br> giveaways and much, much <br> more. Sign up below!</p>
+        </div>
+        <div class="lastCircle"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>
