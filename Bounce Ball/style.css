@@ -15,7 +15,7 @@ body {
     overflow: hidden;
     user-select: none;
 }
-
+/* Design the div into ball */
 #ball {
     width: 150px;
     height: 150px;
@@ -23,17 +23,19 @@ body {
     border-radius: 50%;
     background-color: crimson;
     position: relative;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: bounce 10s cubic-bezier(1, 0.84, 0, 0.12) infinite alternate;
 }
-
+/* Ball bounce animation */
 @keyframes bounce {
     0%{
+        /* For X-axis */
         left: 0%;
+        /* For Y-axis */
         bottom: 0%;
     }
     10%{
         left: 10%;
+        /* Using calc() to minus the 150px width of the ball itself to keep it inside the screen. */
         bottom: calc(100% - 150px);
     }
     20%{
@@ -69,9 +71,8 @@ body {
         bottom: calc(100% - 150px);;
     }
     100%{
+        /* Using calc() to minus the 150px height of the ball itself to keep it inside the screen. */
         left: calc(100% - 150px);;
         bottom: 0%;
     }
 }
-
-/* transform: translate(0px, 0px);  */
