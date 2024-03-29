@@ -18,16 +18,19 @@
             width: 100%;
             height: 100%;
         }
-
+/* Main container of the whole document. */
         .container {
+            height: 100vh;
+            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
-
+/* Styling the boxes. */
         .box {
-            height: 50px;
-            width: 50px;
+            height: 100px;
+            width: 100px;
             padding: 5px;
             margin: 5px;
             border: 2px solid black;
@@ -36,15 +39,18 @@
 </head>
 
 <body>
+    <!-- Whole document containing the 5 boxes. -->
     <div class="container">
-        <div class="box" id="box1">Box1</div>
-        <div class="box" id="box2">Box2</div>
-        <div class="box" id="box3">Box3</div>
-        <div class="box" id="box4">Box4</div>
-        <div class="box" id="box5">Box5</div>
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
     </div>
     <script>
+        // Function to get the random colors for both text and the box backgroundColor.
         function getRandomColor() {
+            // The math.ceil() method rounds a number up to the nearest integer that is greater than or equal to the original number. For example, math.ceil(0.95) returns 1
             let val1 = Math.ceil(0 + Math.random() * 255);
             let val2 = Math.ceil(0 + Math.random() * 255);
             let val3 = Math.ceil(0 + Math.random() * 255);
@@ -52,6 +58,7 @@
         }
         let random = document.getElementsByClassName("box");
         Array.from(random).forEach(e=>{
+            // Calling function to get the random color for both text and backgroundColor
             e.style.backgroundColor = getRandomColor();
             e.style.color = getRandomColor();
         })
