@@ -43,3 +43,16 @@ body {
     border-radius: 50%;
     transform: translate(0%, -50%);
 }
+
+@media (481px < width < 768px) {
+    #dil {
+        height: 150px;
+        width: 150px;
+    }
+}
+@media (320px < width < 480px) {
+    #dil {
+        height: 100px;
+        width: 100px;
+    }
+}
