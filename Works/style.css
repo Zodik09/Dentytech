@@ -42,7 +42,7 @@ body {
     font-family: Freight Big Pro;
     font-size: 5.5rem;
     font-weight: 200;
-    line-height: 8.5vh;
+    line-height: 5vw;
     letter-spacing: -3px;
     font-stretch: condensed;
     color: #ffffff;
@@ -91,9 +91,10 @@ body {
     font-family: Freight Big Pro;
     /* position: absolute; */
     /* z-index: 2; */
-    line-height: 8.5vh;
+    line-height: 5vw;
     letter-spacing: -3px;
     font-stretch: condensed;
+    user-select: none;
 }
 .bottomnav{
     width: 100%;
