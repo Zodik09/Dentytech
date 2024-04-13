@@ -4,13 +4,13 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  user-select: none;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
-  background-color: blue;
 }
 
 :root {
@@ -30,6 +30,7 @@ body {
   background-color: var(--theme-clr);
   color: #ffffff;
   opacity: 1;
+  /* display: none; */
 }
 .yellow {
   width: 100%;
@@ -66,7 +67,7 @@ body {
   font-weight: 400;
   font-size: 1.1em;
 }
-#loaderRightNav img {
+#loaderRightNav svg {
   transform: rotate(45deg);
 }
 .loaderHeading {
@@ -121,7 +122,9 @@ body {
   z-index: 3;
 }
 
-
+svg{
+  cursor: pointer;
+}
 
 
 
@@ -141,7 +144,7 @@ body {
   padding: 30px 60px;
   position: absolute;
   top: 0%;
-  z-index: 1;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,15 +159,19 @@ body {
   align-items: center;
   gap: 60px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 #rightNav a {
   color: #000000;
   font-family: var(--secondary-font-family);
   font-weight: 400;
   font-size: 1.1em;
+  transition: transform 0.5s cubic-bezier(0.89, 0, 1, 0.99);
 }
-#rightNav img {
+#rightNav svg{
   transform: rotate(45deg);
+  transition: transform 0.5s cubic-bezier(0.89, 0, 1, 0.99);
+  background-color: var(--theme-clr);
 }
 .heading {
   width: 100%;

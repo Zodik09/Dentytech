@@ -7,8 +7,7 @@ function locomotive() {
 }
 locomotive();
 function loader() {
-  var tl = gsap.timeline();
-
+  let tl = gsap.timeline();
   tl.to("#loader .yellow", {
     bottom: "100vh",
     duration: 0.4,
@@ -30,7 +29,7 @@ function loader() {
     {
       color: "black",
       duration: 0.5,
-      delay: 0.5
+      delay: 0.5,
     },
     "gotogether"
   );
@@ -39,7 +38,7 @@ function loader() {
     {
       stroke: "black",
       duration: 0.5,
-      delay: 0.5
+      delay: 0.5,
     },
     "gotogether"
   );
@@ -49,7 +48,7 @@ function loader() {
     {
       fill: "black",
       duration: 0.5,
-      delay: 0.5
+      delay: 0.5,
     },
     "gotogether"
   );
@@ -58,11 +57,34 @@ function loader() {
     duration: 0.2,
     ease: "expo.out",
   });
-  tl.to("#loader",{
-    opacity: 0
-  })
-  tl.to("#loader",{
-    display: "none"
-  })
+  tl.to("#loader", {
+    opacity: 0,
+  });
+  tl.to("#loader", {
+    display: "none",
+  });
 }
 loader();
+
+
+function rotate() {
+  const svg = document.getElementById('rotation');
+  const nav = document.querySelectorAll(".links")
+  let rotated = false;
+
+  svg.addEventListener('click', function() {
+    if (rotated) {
+      svg.style.transform = 'rotate(45deg)';
+      nav.forEach(e=>{
+        e.style.transform = 'translateX(0px)'
+      })
+    } else {
+      svg.style.transform = 'rotate(180deg)';
+      nav.forEach(e=>{
+        e.style.transform = 'translateX(500px)'
+      })
+    }
+    rotated = !rotated;
+  });
+};
+rotate()
