@@ -42,7 +42,6 @@ function loader() {
     },
     "gotogether"
   );
-
   tl.to(
     "#loader nav svg path",
     {
@@ -65,26 +64,35 @@ function loader() {
   });
 }
 loader();
-
-
 function rotate() {
-  const svg = document.getElementById('rotation');
-  const nav = document.querySelectorAll(".links")
+  const svg = document.getElementById("rotation");
+  const nav = document.querySelectorAll(".links");
   let rotated = false;
 
-  svg.addEventListener('click', function() {
+  svg.addEventListener("click", function () {
     if (rotated) {
-      svg.style.transform = 'rotate(45deg)';
-      nav.forEach(e=>{
-        e.style.transform = 'translateX(0px)'
-      })
+      svg.style.transform = "rotate(45deg)";
+      nav.forEach((e) => {
+        e.style.transform = "translateX(0px)";
+      });
     } else {
-      svg.style.transform = 'rotate(180deg)';
-      nav.forEach(e=>{
-        e.style.transform = 'translateX(500px)'
-      })
+      svg.style.transform = "rotate(180deg)";
+      nav.forEach((e) => {
+        e.style.transform = "translateX(250px)";
+      });
     }
     rotated = !rotated;
   });
-};
-rotate()
+}
+rotate();
+function bgimage() {
+  var mainHeadings = document.querySelectorAll(".mainHeading");
+  var page2 = document.querySelector("#page2");
+  mainHeadings.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      var bgimg = e.getAttribute("data-img");
+      page2.style.backgroundImage = `url(${bgimg})`;
+    });
+  });
+}
+bgimage();

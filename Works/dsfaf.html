@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hide Navbar on Scroll</title>
+<style>
+/* Navbar styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  transition: top 0.3s; /* Transition for hiding and showing */
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-hidden {
+  top: -50px; /* Move the navbar off-screen */
+}
+</style>
+</head>
+<body>
+
+<!-- Horizontal Hide Navbar -->
+<nav id="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <!-- Your main content goes here -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus est vitae tempor <rutrum class="lorem789"></rutrum></p>
+  <!-- Repeat content to make page longer -->
+  <!-- Add more paragraphs, images, etc. -->
+</div>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  var navbar = document.getElementById("navbar");
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0"; // Show navbar if scrolling up
+    navbar.classList.remove("navbar-hidden"); // Remove hidden class
+  } else {
+    navbar.style.top = "-50px"; // Hide navbar if scrolling down
+    navbar.classList.add("navbar-hidden"); // Add hidden class
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+</body>
+</html>

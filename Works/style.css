@@ -6,18 +6,18 @@
   text-decoration: none;
   user-select: none;
 }
-
 html,
 body {
   width: 100%;
   height: 100%;
 }
-
 :root {
   --primary-font-family: Freight Big Pro;
   --secondary-font-family: Poppins;
   --theme-clr: #f5e41b;
 }
+
+/* Loader styles start here. */
 #loader {
   width: 100%;
   height: 100vh;
@@ -52,7 +52,7 @@ body {
   align-items: center;
   /* background-color: red; */
 }
-#loaderRightNav{
+#loaderRightNav {
   width: 50%;
   height: 100%;
   display: flex;
@@ -61,7 +61,7 @@ body {
   gap: 60px;
   text-transform: uppercase;
 }
-#loaderRightNav a{
+#loaderRightNav a {
   color: #ffffff;
   font-family: var(--secondary-font-family);
   font-weight: 400;
@@ -82,7 +82,6 @@ body {
   top: 0%;
   z-index: 4;
 }
-
 .loaderHeading h1 {
   font-size: 5.5em;
   font-weight: 200;
@@ -95,7 +94,7 @@ body {
   user-select: none;
   color: #ffffff;
 }
-#loader .bottomNav{
+#loader .bottomNav {
   width: 100%;
   /* background-color: red; */
   position: absolute;
@@ -121,14 +120,12 @@ body {
   bottom: 0%;
   z-index: 3;
 }
-
-svg{
+svg {
   cursor: pointer;
 }
+/* Loader styles end here. */
 
-
-
-
+/* Page 1 styles start here. */
 #page1 {
   width: 100%;
   height: 100vh;
@@ -137,6 +134,7 @@ svg{
   top: 0%;
   z-index: 1;
   font-size: 1rem;
+  /* display: none; */
 }
 #page1 nav {
   width: 100%;
@@ -150,7 +148,6 @@ svg{
   align-items: center;
   /* background-color: red; */
 }
-
 #rightNav {
   width: 50%;
   height: 100%;
@@ -161,14 +158,30 @@ svg{
   text-transform: uppercase;
   overflow: hidden;
 }
-#rightNav a {
+a {
   color: #000000;
   font-family: var(--secondary-font-family);
   font-weight: 400;
   font-size: 1.1em;
   transition: transform 0.5s cubic-bezier(0.89, 0, 1, 0.99);
+  position: relative;
 }
-#rightNav svg{
+a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transform: scaleX(0%);
+  transition: transform 0.2s ease-in-out;
+}
+a:hover::after {
+  transform: scaleX(100%);
+}
+#rightNav svg {
   transform: rotate(45deg);
   transition: transform 0.5s cubic-bezier(0.89, 0, 1, 0.99);
   background-color: var(--theme-clr);
@@ -214,24 +227,106 @@ svg{
   font-family: var(--secondary-font-family);
   font-size: 1.1em;
 }
+/* Page 1 styles end here. */
 
-
-
-
-
-
-
-
-
-
-
+/* Page 2 styles start here. */
 #page2 {
   width: 100%;
   height: 100vh;
-  background-color: rgb(0, 255, 17);
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
 }
+.mainHeading {
+  text-align: center;
+  position: relative;
+  /* background-color: red; */
+  width: 100vw;
+  line-height: 4em;
+}
+.mainHeading h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+  font-weight: 200;
+  cursor: pointer;
+}
+.mainHeading h1:hover {
+  font-style: italic;
+  color: #000000;
+}
+.mainHeading h1:hover ~ .firstLine {
+  visibility: visible;
+}
+.firstLine {
+  height: 5vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  top: 25%;
+  overflow:hidden;
+  background-color: var(--theme-clr);
+  z-index: -1;
+  color: #000000;
+  user-select: none;
+  visibility: hidden;
+  transform: scaleY(0%);
+  transition: transform 0.2s cubic-bezier(0.78, 0.18, 0.98, 1);
+}
+.mainHeading h1:hover ~ .firstLine {
+  transform: scaleY(100%);
+}
+.firstLine::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: red;
+  height: 100vh;
+  z-index: 100;
+}
+#blur {
+  width: 40vw;
+  /* height: 29px; */
+  height: 10px;
+  position: absolute;
+  left: 380px;
+  z-index: 1;
+  background-color: var(--theme-clr);
+  box-shadow: 0px 0px 20px 20px var(--theme-clr);
+}
+.firstLine .line {
+  font-family: var(--secondary-font-family);
+  animation: anime 5s linear infinite;
+}
+
+@keyframes anime {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.firstLine .line span {
+  margin: 0px 10px;
+}
+/* Page 2 styles end here. */
+
+/* Page 3 styles start here. */
 #page3 {
   width: 100%;
   height: 100vh;
-  background-color: rgb(0, 149, 255);
+  background-color: rgb(255, 255, 255);
 }
+/* Page 3 styles end here. */
