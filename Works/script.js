@@ -4,6 +4,11 @@ function locomotive() {
     smooth: true,
     lerp: 0.1,
   });
+  // Back To Top Animation.
+  var top = document.querySelector("#backToTop");
+  top.addEventListener("click",()=>{
+    scroll.scrollTo(0)
+  })
 }
 locomotive();
 function loader() {

@@ -244,6 +244,7 @@ a:hover::after {
   align-items: center;
   flex-direction: column;
   font-size: 1rem;
+  /* display: none; */
 }
 .mainHeading {
   text-align: center;
@@ -273,7 +274,7 @@ a:hover::after {
   align-items: center;
   text-wrap: nowrap;
   top: 25%;
-  overflow:hidden;
+  overflow: hidden;
   background-color: var(--theme-clr);
   z-index: -1;
   color: #000000;
@@ -325,8 +326,138 @@ a:hover::after {
 
 /* Page 3 styles start here. */
 #page3 {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 2500px;
   background-color: rgb(255, 255, 255);
+  padding: 30px 10px;
+  /* margin-bottom: 20px; */
+  overflow: hidden;
+  /* background-color: red; */
+  /* display: none; */
 }
+#page3 > section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+section .sec {
+  max-width: 30vw;
+}
+section .sec .image {
+  max-width: 30vw;
+  position: relative;
+  height: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+section .sec .image .overlay {
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.135);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: var(--primary-font-family);
+  padding: 20px;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+section .overlay h1{
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+section .sec .image:hover .overlay{
+  background-color: #000000;
+  color: #ffffff;
+  opacity: 1;
+}
+section .sec .image:hover .overlay h1{
+  opacity: 1;
+}
+
+section .sec .image img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s ease-in-out;
+}
+section .sec .image:hover img {
+  transform: scale(1.1);
+}
+
 /* Page 3 styles end here. */
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: skyblue; */
+}
+#backToTop {
+  width: 100vw;
+  /* background-color: green; */
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: var(--secondary-font-family);
+  position: relative;
+  cursor: pointer;
+}
+#backToTop svg {
+  position: absolute;
+  top: 15%;
+  transform: rotate(180deg);
+}
+footer > .foot {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+}
+footer > .foot a {
+  color: #ffffff;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 1.1em;
+  transition: transform 0.5s cubic-bezier(0.89, 0, 1, 0.99);
+  position: relative;
+}
+footer > .foot a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  transform: scaleX(0%);
+  transition: transform 0.2s ease-in-out;
+}
+footer > .foot a:hover::after {
+  transform: scaleX(100%);
+}
+.footRight {
+  display: flex;
+  gap: 60px;
+  color: #ffffff;
+}
+.footLeft {
+  color: #ffffff;
+}
