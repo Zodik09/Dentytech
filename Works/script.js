@@ -4,11 +4,22 @@ function locomotive() {
     smooth: true,
     lerp: 0.1,
   });
+
   // Back To Top Animation.
   var top = document.querySelector("#backToTop");
-  top.addEventListener("click",()=>{
-    scroll.scrollTo(0)
-  })
+  top.addEventListener("click", () => {
+    scroll.scrollTo(0);
+  });
+  // Go to Page 2.
+  var bottom1 = document.querySelector("#goToBottom1");
+  bottom1.addEventListener("click", () => {
+    scroll.scrollTo(720);
+  });
+  
+  var bottom2 = document.querySelector("#goToBottom2");
+  bottom2.addEventListener("click", () => {
+    scroll.scrollTo(1440);
+  });
 }
 locomotive();
 function loader() {

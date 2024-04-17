@@ -3,74 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hide Navbar on Scroll</title>
+<title>Hide Div on Scroll</title>
 <style>
-/* Navbar styles */
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 10px 0;
-  transition: top 0.3s; /* Transition for hiding and showing */
-}
-
-#navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-#navbar ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-#navbar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar-hidden {
-  top: -50px; /* Move the navbar off-screen */
-}
+  #myDiv {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    transition: opacity 0.3s ease;
+  }
+  .box{
+    height: 400vh;
+    width: 100vw;
+  }
 </style>
 </head>
 <body>
 
-<!-- Horizontal Hide Navbar -->
-<nav id="navbar">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+<div id="myDiv">This is the div to hide on scroll.</div>
 
-<div class="content">
-  <!-- Your main content goes here -->
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus est vitae tempor <rutrum class="lorem789"></rutrum></p>
-  <!-- Repeat content to make page longer -->
-  <!-- Add more paragraphs, images, etc. -->
-</div>
-
+<div class="box"></div>
 <script>
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  var navbar = document.getElementById("navbar");
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.top = "0"; // Show navbar if scrolling up
-    navbar.classList.remove("navbar-hidden"); // Remove hidden class
+window.addEventListener('scroll', function() {
+  var myDiv = document.getElementById('myDiv');
+  if (window.scrollY > 50) { // Change 50 to the desired scroll position where you want to hide the div
+    myDiv.style.opacity = 0;
   } else {
-    navbar.style.top = "-50px"; // Hide navbar if scrolling down
-    navbar.classList.add("navbar-hidden"); // Add hidden class
+    myDiv.style.opacity = 1;
   }
-  prevScrollpos = currentScrollPos;
-}
+});
 </script>
 
 </body>

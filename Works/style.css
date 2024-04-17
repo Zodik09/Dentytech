@@ -16,10 +16,9 @@ body {
   --secondary-font-family: Poppins;
   --theme-clr: #f5e41b;
 }
-
 /* Loader styles start here. */
 #loader {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: transparent;
   position: fixed;
@@ -41,7 +40,7 @@ body {
   z-index: 5;
 }
 #loader nav {
-  width: 100%;
+  width: 100vw;
   /* height: 10vh; */
   padding: 30px 60px;
   position: absolute;
@@ -68,6 +67,8 @@ body {
   font-size: 1.1em;
 }
 #loaderRightNav svg {
+  width: 26px;
+  height: 26px;
   transform: rotate(45deg);
 }
 .loaderHeading {
@@ -127,7 +128,7 @@ svg {
 
 /* Page 1 styles start here. */
 #page1 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: var(--theme-clr);
   position: relative;
@@ -137,7 +138,7 @@ svg {
   /* display: none; */
 }
 #page1 nav {
-  width: 100%;
+  width: 100vw;
   /* height: 10vh; */
   padding: 30px 60px;
   position: absolute;
@@ -157,6 +158,10 @@ svg {
   gap: 60px;
   text-transform: uppercase;
   overflow: hidden;
+}
+#rightNav > svg {
+  width: 26px;
+  height: 26px;
 }
 a {
   color: #000000;
@@ -322,6 +327,15 @@ a:hover::after {
 .firstLine .line span {
   margin: 0px 10px;
 }
+.bottomArrow {
+  width: 100vw;
+}
+.bottomArrow svg {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
 /* Page 2 styles end here. */
 
 /* Page 3 styles start here. */
@@ -329,16 +343,16 @@ a:hover::after {
   width: 100vw;
   height: 2500px;
   background-color: rgb(255, 255, 255);
-  padding: 30px 10px;
-  /* margin-bottom: 20px; */
+  padding: 30px 30px 30px 50px;
   overflow: hidden;
-  /* background-color: red; */
   /* display: none; */
 }
 #page3 > section {
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: flex-start; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 section .sec {
   max-width: 30vw;
@@ -352,14 +366,15 @@ section .sec .image {
 }
 section .sec .image .overlay {
   width: 100%;
-  height: 99%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.135);
   position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 40px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -368,17 +383,18 @@ section .sec .image .overlay {
   opacity: 1;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
+  overflow: hidden;
 }
-section .overlay h1{
+section .overlay p {
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-section .sec .image:hover .overlay{
+section .sec .image:hover .overlay {
   background-color: #000000;
   color: #ffffff;
   opacity: 1;
 }
-section .sec .image:hover .overlay h1{
+section .sec .image:hover .overlay p {
   opacity: 1;
 }
 
@@ -396,6 +412,7 @@ section .sec .image:hover img {
 
 /* Page 3 styles end here. */
 
+/* Footer navbar starts here. */
 footer {
   width: 100vw;
   display: flex;
@@ -460,4 +477,179 @@ footer > .foot a:hover::after {
 }
 .footLeft {
   color: #ffffff;
+}
+/* Footer navbar ends here. */
+
+/* Media Query for Large Devices. */
+@media (width < 1025px) {
+  #main {
+    width: 100vw;
+    overflow: hidden;
+  }
+  #loader nav {
+    padding: 25px 25px;
+  }
+  #loaderRightNav a {
+    display: none;
+  }
+  #loaderRightNav svg {
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+  }
+
+  .loaderHeading h1 {
+    font-size: 4.5em;
+    font-weight: 100;
+    line-height: 5vw;
+  }
+  #loader .bottomNav {
+    padding: 25px 25px;
+    font-size: 0.9rem;
+  }
+  /* Loader styles end here. */
+
+  /* Page 1 styles start here. */
+  #page1 nav {
+    padding: 25px 25px;
+  }
+  #rightNav a {
+    display: none;
+  }
+  #rightNav > svg {
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+  }
+
+  .heading h1 {
+    font-size: 4.5em;
+    font-weight: 100;
+    line-height: 5vw;
+  }
+  .bottomNav {
+    padding: 25px 25px;
+    font-size: 0.9rem;
+  }
+  /* Page 1 styles end here. */
+
+  /* Page 2 styles start here. */
+  #page2 {
+    font-size: 0.8rem;
+  }
+  /* Page 2 styles end here. */
+
+  /* Page 3 styles start here. */
+  #page3 {
+    height: max-content;
+    padding: 30px;
+  }
+  #page3 > section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section .sec {
+    max-width: 50vw;
+    margin-right: 20px;
+  }
+  section .sec3 {
+    max-width: 100vw !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    gap: 5px 20px;
+  }
+  section .sec .image {
+    max-width: 50vw;
+  }
+  section .sec .image .overlay {
+    font-size: 3rem;
+  }
+
+  /* Page 3 styles end here. */
+
+  /* Footer navbar starts here. */
+
+  #backToTop {
+    padding: 40px;
+  }
+  footer > .foot {
+    padding: 30px;
+  }
+  /* Footer navbar ends here. */
+}
+/* Media Query for Medium Devices. */
+@media (width < 769px) {
+  #main {
+    width: 100vw;
+    overflow: hidden;
+  }
+  #loader nav {
+    padding: 20px 25px;
+  }
+  #loaderRightNav a {
+    display: none;
+  }
+  #loaderRightNav svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .loaderHeading h1 {
+    font-size: 3.5em;
+  }
+  /* Loader styles end here. */
+
+  /* Page 1 styles start here. */
+  #page1 nav {
+    padding: 20px 25px;
+  }
+  #rightNav a {
+    display: none;
+  }
+  #rightNav > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .heading h1 {
+    font-size: 3.5em;
+  }
+  .bottomNav {
+    padding: 25px 25px;
+    font-size: 0.9rem;
+  }
+  .bottomNav svg {
+    height: 15px !important;
+    width: 40px !important;
+  }
+  /* Page 1 styles end here. */
+
+  /* Page 2 styles start here. */
+  #page2 {
+    font-size: 0.7rem;
+  }
+  /* Page 2 styles end here. */
+
+  /* Page 3 styles start here. */
+  #page3 {
+    padding: 10px;
+  }
+  section .sec {
+    margin-right: 10px;
+  }
+  section .sec3 {
+    gap: 5px 10px;
+  }
+  /* Page 3 styles end here. */
+
+  /* Footer navbar starts here. */
+
+  footer > .foot a {
+    font-size: 1em;
+  }
+  /* Footer navbar ends here. */
+}
+/* Media Query for Small Devices. */
+@media (width < 481px) {
 }
