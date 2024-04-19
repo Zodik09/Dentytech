@@ -95,9 +95,8 @@ body {
   user-select: none;
   color: #ffffff;
 }
-#loader .bottomNav {
+.loaderBottomNav {
   width: 100%;
-  /* background-color: red; */
   position: absolute;
   bottom: 0%;
   z-index: 4;
@@ -107,7 +106,7 @@ body {
   align-items: flex-end;
   font-size: 1rem;
 }
-#loader .bottomNav a {
+.loaderBottomNav a {
   color: #ffffff;
   text-transform: uppercase;
   font-family: var(--secondary-font-family);
@@ -137,6 +136,9 @@ svg {
   font-size: 1rem;
   /* display: none; */
 }
+#mobileRightNav{
+  display: none;
+}
 #page1 nav {
   width: 100vw;
   /* height: 10vh; */
@@ -148,6 +150,10 @@ svg {
   justify-content: space-between;
   align-items: center;
   /* background-color: red; */
+}
+.core-logo {
+  width: 94px;
+  height: 21px;
 }
 #rightNav {
   width: 50%;
@@ -231,6 +237,11 @@ a:hover::after {
   text-transform: uppercase;
   font-family: var(--secondary-font-family);
   font-size: 1.1em;
+}
+#goToBottom1,
+#goToBottom2 {
+  height: 17px;
+  width: 49px;
 }
 /* Page 1 styles end here. */
 
@@ -435,8 +446,10 @@ footer {
 }
 #backToTop svg {
   position: absolute;
-  top: 15%;
+  top: 20%;
   transform: rotate(180deg);
+  width: 20;
+  height: 10px;
 }
 footer > .foot {
   width: 100vw;
@@ -503,7 +516,7 @@ footer > .foot a:hover::after {
     font-weight: 100;
     line-height: 5vw;
   }
-  #loader .bottomNav {
+  .loaderBottomNav {
     padding: 25px 25px;
     font-size: 0.9rem;
   }
@@ -652,4 +665,178 @@ footer > .foot a:hover::after {
 }
 /* Media Query for Small Devices. */
 @media (width < 481px) {
+  #main {
+    width: 100vw;
+    overflow: hidden;
+  }
+  #loader {
+    height: 87vh;
+  }
+  #loader nav {
+    padding: 30px 30px;
+  }
+  #loaderRightNav a {
+    display: none;
+  }
+  #loaderRightNav svg {
+    width: 18px;
+    height: 18px;
+  }
+  .loaderHeading {
+    width: 30vw;
+    margin: auto;
+  }
+  .loaderHeading h1 {
+    font-size: 2.5em;
+    line-height: 30px;
+  }
+  .loaderBottomNav {
+    padding: 30px 30px;
+    font-size: 0.8rem;
+  }
+  .loaderBottomNav svg {
+    height: 15px !important;
+    width: 25px !important;
+  }
+
+  /* Loader styles end here. */
+
+  /* Page 1 styles start here. */
+  #page1 {
+    height: 87vh;
+  }
+
+
+  #page1 nav {
+    padding: 30px 30px;
+  }
+  .core-logo {
+    width: 85px;
+    height: 20px;
+  }
+  #mobileRightNav{
+    width: 30vw;
+    height: 15vh;
+    position: absolute;
+    right: 5%;
+    bottom: -140%;
+    background-color: #918500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 15px;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(250px);
+  }
+  #mobileRightNav a{
+    color: #ffffff;
+    text-decoration-color: #ffffff !important;
+  }
+  a::after {
+    background-color: rgb(255, 255, 255);
+  }
+  #rightNav > svg {
+    width: 18px;
+    height: 18px;
+  }
+  .heading {
+    width: 30vw;
+    margin: auto;
+  }
+  .heading h1 {
+    font-size: 2.5em;
+    line-height: 30px;
+  }
+  .bottomNav {
+    padding: 30px 30px;
+    font-size: 0.8rem;
+  }
+  .bottomNav svg {
+    height: 15px !important;
+    width: 25px !important;
+  }
+  /* Page 1 styles end here. */
+
+  /* Page 2 styles start here. */
+  #page2 {
+    font-size: 0.6rem;
+    /* display: none; */
+  }
+  .mainHeading {
+    line-height: 4.5em;
+  }
+  .mainHeading h1 {
+    font-weight: 100;
+  }
+  .mainHeading h1:active {
+    font-style: italic;
+    color: #000000;
+  }
+  .mainHeading h1:active ~ .firstLine {
+    visibility: visible;
+  }
+  .firstLine {
+    height: 2vh;
+  }
+  .mainHeading h1:active ~ .firstLine {
+    transform: scaleY(100%);
+  }
+  #blur {
+    width: 60vw;
+    left: 80px;
+  }
+  .bottomArrow {
+    width: 100vw;
+  }
+  .bottomArrow svg {
+    display: none;
+  }
+  /* Page 2 styles end here. */
+
+  /* Page 3 styles start here. */
+  #page3 {
+    padding: 10px;
+  }
+  #page3 > section {
+    grid-template-columns: 1fr;
+  }
+  section .sec {
+    max-width: 100vw;
+  }
+
+  section .sec3 {
+    display: block;
+  }
+  section .sec .image {
+    max-width: 100vw;
+    margin-bottom: 10px;
+  }
+  section .sec .image .overlay {
+    font-size: 2rem;
+    line-height: 30px;
+    padding: 30px;
+  }
+  /* Page 3 styles end here. */
+
+  /* Footer navbar starts here. */
+
+  #backToTop svg {
+    top: 15%;
+  }
+  footer > .foot {
+    flex-direction: column;
+    padding: 30px;
+    gap: 25px;
+  }
+  footer > .foot a {
+    font-size: 1em;
+  }
+  .footRight {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  /* Footer navbar ends here. */
 }

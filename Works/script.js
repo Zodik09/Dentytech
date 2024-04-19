@@ -41,7 +41,7 @@ function loader() {
     "gotogether"
   );
   tl.to(
-    ".loaderHeading h1, #loaderRightNav a, .bottomNav a",
+    ".loaderHeading h1, #loaderRightNav a, .loaderBottomNav a",
     {
       color: "black",
       duration: 0.5,
@@ -50,7 +50,7 @@ function loader() {
     "gotogether"
   );
   tl.to(
-    "#loaderRightNav svg g, .bottomNav svg polyline",
+    "#loaderRightNav svg g, .loaderBottomNav svg polyline",
     {
       stroke: "black",
       duration: 0.5,
@@ -80,19 +80,20 @@ function loader() {
   });
 }
 loader();
-function rotate() {
+
+function rotate1() {
   const svg = document.getElementById("rotation");
   const nav = document.querySelectorAll(".links");
   let rotated = false;
 
   svg.addEventListener("click", function () {
     if (rotated) {
-      svg.style.transform = "rotate(45deg)";
+      svg.style.transform = "rotate(0deg)";
       nav.forEach((e) => {
         e.style.transform = "translateX(0px)";
       });
     } else {
-      svg.style.transform = "rotate(180deg)";
+      svg.style.transform = "rotate(135deg)";
       nav.forEach((e) => {
         e.style.transform = "translateX(250px)";
       });
@@ -100,7 +101,35 @@ function rotate() {
     rotated = !rotated;
   });
 }
-rotate();
+function rotate2() {
+  const svg = document.getElementById("rotation");
+  const mobileRightNav = document.querySelector("#mobileRightNav");
+  let rotated = false;
+
+  svg.addEventListener("click", function () {
+    if (rotated) {
+      svg.style.transform = "rotate(0deg)";
+      mobileRightNav.style.transform = "translateX(250px)";
+    } else {
+      svg.style.transform = "rotate(-135deg)";
+        mobileRightNav.style.transform = "translateX(0px)";
+    }
+    rotated = !rotated;
+  });
+}
+function myFunction() {
+  var width = window.innerWidth;
+  if (width > 1025) {
+      rotate1();
+  } 
+  else {
+      rotate2();
+  }
+}
+// Call myFunction on page load and whenever the window is resized
+window.onload = myFunction;
+window.onresize = myFunction;
+
 function bgimage() {
   var mainHeadings = document.querySelectorAll(".mainHeading");
   var page2 = document.querySelector("#page2");
