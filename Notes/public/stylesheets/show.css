@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#main {
+    height: 100%;
+    /* width: 100%; */
+    padding: 50px;
+}
+
+#main>h1 {
+    color: rgb(255, 114, 143);
+    text-align: center;
+    font-size: 2rem;
+}
+.filedata{
+    color: white;
+}
+.filedata a{
+    color: blue;
+}
+.filedata h2{
+    padding: 20px 0px 0px 0px;
+    font-size: 2rem;
+}
+.filedata p{
+    font-size: 1rem;
+}

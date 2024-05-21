@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Edit</h1>
+        <div class="filedata">
+            <a href="/">&lt; Go back to home</a>
+            <form action="/edit" method="post">
+                <input type="text" placeholder="Previous name" name="previous" value="<%= filename %>">
+                <input type="text" placeholder="New File name" name="new" value="new file">
+                <button>Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>
