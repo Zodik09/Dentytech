@@ -15,7 +15,7 @@ body {
     background-color: var(--loader1-clr);
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -31,6 +31,7 @@ body::-webkit-scrollbar{
     --body-font-family: comfortaa, serif;
     --font-clr: #383838;
 }
+
 /* ----------Websites theme color and font family---------- */
 .themeTextColor {
     background-image: var(--loader2-clr);
@@ -40,6 +41,7 @@ body::-webkit-scrollbar{
     font-family: var(--theme-style-font-family);
     font-weight: 900;
 }
+
 /* ----------Class to make the text appear from the bottom Starts here---------- */
 .reveal .parent {
     display: block;
@@ -53,11 +55,13 @@ body::-webkit-scrollbar{
 .parent .child span {
     display: inline-block;
 }
+
 /* ----------Class to make the text appear from the bottom Ends here---------- */
 
 /* ----------Main Container to hold the whole website and to apply the locomotiveJS---------- */
 #main {
     width: 100%;
+    overflow: hidden;
 }
 
 /* ----------Loader1 Starts here---------- */
@@ -84,7 +88,7 @@ body::-webkit-scrollbar{
 
 #topheading h5 {
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 1vw;
     font-weight: 400;
     text-align: center;
 }
@@ -102,7 +106,7 @@ body::-webkit-scrollbar{
 
 #loader .loading {
     height: 100vh;
-    padding: 20px;
+    padding: 2vw;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -135,38 +139,37 @@ body::-webkit-scrollbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5vw;
+    padding: 3vw 5vw;
     width: 100%;
     height: 10vh;
-    font-size: 1rem;
 }
 
 #nav a {
     text-transform: uppercase;
     font-weight: 100;
     color: #4e4e4e;
-    font-size: 0.6em;
     font-family: var(--body-font-family);
     position: relative;
     transition: all 0.2s ease-in;
+    font-size: 1vw;
 }
 
 #nav a .line {
     display: inline-block;
     position: absolute;
     background-color: #4e4e4e;
-    height: 0.1px;
+    height: 0.05vw;
 }
 
 #nav a .line1 {
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     width: 0%;
 }
 
 #nav a .line2 {
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
     width: 99%;
 }
 
@@ -213,10 +216,11 @@ body::-webkit-scrollbar{
 
 #hero .row1 h1,
 #hero .row2 h1 {
-    font-size: 8em;
+    font-size: 10vw;
     font-weight: 900;
-    letter-spacing: -9px;
+    letter-spacing: -0.5vw;
     width: 50vw;
+    white-space: nowrap;
 }
 
 #hero .row1,
@@ -227,11 +231,11 @@ body::-webkit-scrollbar{
 }
 
 #hero .row1 {
-    align-items: flex-start;
+    align-items: center;
 }
 
 #hero .row2 {
-    align-items: baseline;
+    align-items: center;
     position: relative;
 }
 
@@ -241,6 +245,7 @@ body::-webkit-scrollbar{
     top: -110%;
     opacity: 0;
     scale: 10;
+    height: 15.835vw;
 }
 
 #hero .row1 .text {
@@ -249,13 +254,19 @@ body::-webkit-scrollbar{
 
 #hero .row1 .text h5 {
     color: rgb(183, 183, 183);
-    font-size: 0.5em;
+    font-size: 0.633vw;
     text-transform: uppercase;
     letter-spacing: -2;
+    text-align: center;
 }
 
 #hero .row2 #downArrow {
-    margin-left: 25px;
+    margin-left: 3vw;
+    height: 6vw;
+}
+
+#hero .row2 #web {
+    height: 8.5vw;
 }
 
 /* ----------Hero Section Ends here---------- */
@@ -271,7 +282,7 @@ body::-webkit-scrollbar{
 
 #home #intro .left {
     width: 40%;
-    font-size: 0.7em;
+    font-size: 0.887vw;
     color: #414141;
 }
 
@@ -289,7 +300,7 @@ body::-webkit-scrollbar{
     position: absolute;
     top: -20%;
     left: 20%;
-    border-radius: 30px;
+    border-radius: 2.375vw;
     filter: saturate(0);
     transition: all ease-in-out 0.5s;
     z-index: 9;
@@ -300,17 +311,16 @@ body::-webkit-scrollbar{
 }
 
 #home #intro .right img:nth-child(1) {
-    transform: translate3d(-80px, -80px, 0px) rotate(-20deg);
+    transform: translate3d(-6.334vw, -6.334vw, 0px) rotate(-20deg);
 }
 
 #home #intro .right img:nth-child(2) {
-    transform: translate3d(40px, 0px, 0px) rotate(-10deg);
+    transform: translate3d(3.167vw, 0px, 0px) rotate(-10deg);
 }
 
 #home #intro .right img:nth-child(3) {
-    transform: translate3d(160px, 80px, 0px) rotate(0deg);
+    transform: translate3d(12.668vw, 6.334vw, 0px) rotate(0deg);
 }
-
 /* ----------Intro Ends here---------- */
 
 /* ----------Torn Paper Starts here---------- */
@@ -331,13 +341,17 @@ body::-webkit-scrollbar{
     background-size: cover;
     position: absolute;
     top: -7%;
-    transform: rotate(180deg);
+    transform: rotateX(180deg);
     z-index: 0;
 }
 
 /* ----------Skills Starts here---------- */
 #tornPaper .skills {
     padding: 3vh 5vw;
+}
+
+.arrow {
+    height: 5.067vw;
 }
 
 #tornPaper .skills .arrowSVG svg {
@@ -354,7 +368,7 @@ body::-webkit-scrollbar{
     color: rgba(65, 65, 65, 0.699);
     font-weight: 900;
     font-size: 1vw;
-    line-height: 20px;
+    line-height: 1.584vw;
     margin-bottom: 2vw;
     position: relative;
     z-index: 9999;
@@ -363,7 +377,7 @@ body::-webkit-scrollbar{
 #tornPaper .skills .skillsList h2 {
     color: var(--font-clr);
     font-weight: 900;
-    line-height: 30px;
+    line-height: 2.375vw;
     cursor: pointer;
 }
 
@@ -371,7 +385,7 @@ body::-webkit-scrollbar{
     color: var(--font-clr);
     font-weight: 400;
     font-size: 2vw;
-    line-height: 30px;
+    line-height: 2.375vw;
 }
 
 #tornPaper .skills .skillsList .skill1,
@@ -393,7 +407,6 @@ body::-webkit-scrollbar{
     right: 0%;
     opacity: 0;
 }
-
 /* ----------Skills Ends here---------- */
 
 #tornPaper hr {
@@ -419,7 +432,7 @@ body::-webkit-scrollbar{
 }
 
 #tornPaper #feat .row1 h1 .tally {
-    font-size: 1rem;
+    font-size: 1.267vw;
     margin-left: 3vw;
 }
 
@@ -440,14 +453,12 @@ body::-webkit-scrollbar{
     position: relative;
 }
 
-
 #tornPaper #feat .row2 .images .firstimg {
     width: 50vw;
-    border-radius: 50px;
+    border-radius: 3.959vw;
     overflow: hidden;
-    box-shadow: 10px 16px 20px 0px #6e6e6e73;
+    box-shadow: 0.792vw 1.267vw 1.584vw 0px #6e6e6e73;
 }
-
 
 #tornPaper #feat .row2 .images .firstimg a img {
     width: 100%;
@@ -458,9 +469,9 @@ body::-webkit-scrollbar{
 
 #tornPaper #feat .row2 .images .secondimg {
     width: 30vw;
-    border-radius: 50px;
+    border-radius: 3.959vw;
     overflow: hidden;
-    box-shadow: 10px 16px 20px 0px #6e6e6e73;
+    box-shadow: 0.792vw 1.267vw 1.584vw 0px #6e6e6e73;
 }
 
 #tornPaper #feat .row2 .images .secondimg a img:last-child {
@@ -468,7 +479,6 @@ body::-webkit-scrollbar{
     height: 80vh;
     object-fit: cover;
 }
-
 /* ----------Torn Paper Ends here---------- */
 /* ----------Home Ends here---------- */
 
@@ -494,12 +504,12 @@ footer .message {
 footer .message svg {
     stroke: white;
     rotate: 90deg;
-    margin-top: 300px;
+    margin-top: 23.753vw;
 }
 
 footer .message h1 {
     font-size: 7vw;
-    line-height: 80px;
+    line-height: 6.334vw;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
@@ -533,9 +543,9 @@ footer .messageBtn {
     width: 50%;
     display: flex;
     justify-content: center;
-    border: 1px solid white;
+    border: 0.079vw solid white;
     margin: 3vw auto;
-    border-radius: 100px;
+    border-radius: 7.918vw;
     position: relative;
     overflow: hidden;
 }
@@ -559,7 +569,7 @@ footer .messageBtn::after {
     background-color: white;
     top: 0;
     left: 0;
-    border-radius: 100px;
+    border-radius: 7.918vw;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     transform: scale(0, 2);
     z-index: 0;
@@ -599,9 +609,9 @@ footer .social .link {
 footer .social .link::before {
     content: '';
     width: 100%;
-    height: 1px;
+    height: 0.079vw;
     position: absolute;
-    top: -20px;
+    top: -1.584vw;
     left: 0;
     background-color: #fff;
     z-index: 0;
@@ -628,16 +638,18 @@ footer .social .link .nameId h2 {
     color: #fff;
     text-transform: capitalize;
     font-size: 2vw;
+    width: 10vw;
 }
 
 footer .social .link .nameId p {
     color: #a9a9a9;
     font-size: 1vw;
     text-transform: lowercase;
+    width: 10vw;
 }
 
 footer .social svg {
-    height: 30px;
+    height: 2.5vw;
     position: relative;
     z-index: 1;
 }
@@ -649,8 +661,8 @@ footer #circle {
     width: 100%;
     position: absolute;
     bottom: -80%;
-    left: 40%;
-    z-index: -1;
+    left: 41%;
+    z-index: 0;
     /* transform: translate(0,-50%); */
 }
 
@@ -662,5 +674,230 @@ footer .copyright {
     align-items: center;
     padding: 2vw 5vw 0 5vw;
 }
-
 /* ----------Footer Ends here---------- */
+
+/* Media Query for Large Devices Starts here. */
+@media (769px < width < 1080px) {
+    /* ----------Websites theme color and font family---------- */
+    .themeTextColor {
+        font-weight: 900;
+    }
+
+    /* ----------Loader1 Starts here---------- */
+    #topheading h5 {
+        font-size: 1.5vw;
+        font-weight: 100;
+    }
+
+    #loader h1 {
+        font-size: 6vw;
+        font-weight: 100;
+    }
+
+    #loader .loading {
+        padding: 0 0 8vw 0;
+    }
+
+    /* ----------Loader1 Ends here---------- */
+
+    #nav a {
+        font-weight: 900;
+        font-size: 1.5vw;
+    }
+
+    #nav a .line {
+        height: 0.1vw;
+    }
+    /* ----------NavBar Ends here---------- */
+
+    /* ----------Hero Section Starts here---------- */
+    #hero {
+        height: 40vh;
+    }
+
+    #hero .row1 h1,
+    #hero .row2 h1 {
+        width: 60vw;
+    }
+
+    #hero .row2 img {
+        right: 18%;
+    }
+
+    #hero .row1 .text h5 {
+        font-size: 0.933vw;
+        text-align: left;
+    }
+
+    #hero .row2 #downArrow {
+        margin-left: 1vw;
+        height: 6vw;
+    }
+
+    #hero .row2 #web {
+        padding: 0px 4vw;
+    }
+    /* ----------Hero Section Ends here---------- */
+
+    /* ----------Intro Starts here---------- */
+    #home #intro {
+        padding: 0vw 5vw 0vw 5vw;
+    }
+
+    #home #intro .left {
+        font-size: 1vw;
+    }
+
+    #home #intro .right {
+        height: 40vh;
+    }
+
+    #home #intro .right img {
+        top: 5%;
+    }
+
+    #home #intro .right img:nth-child(1) {
+        transform: translate3d(-5.334vw, -5.334vw, 0px) rotate(-15deg);
+    }
+
+    #home #intro .right img:nth-child(2) {
+        transform: translate3d(2.167vw, 0px, 0px) rotate(-5deg);
+    }
+
+    #home #intro .right img:nth-child(3) {
+        transform: translate3d(10.668vw, 5.334vw, 0px) rotate(0deg);
+    }
+    /* ----------Intro Ends here---------- */
+
+    /* ----------Torn Paper Starts here---------- */
+    #tornPaper {
+        padding-bottom: 5vw;
+    }
+
+    #tornPaper::before {
+        height: 20vh;
+        top: -5%;
+    }
+
+    /* ----------Skills Starts here---------- */
+    #tornPaper .skills {
+        padding: 4vw 3vw 2vw 3vw;
+    }
+
+    #tornPaper .skills .skillsList {
+        padding: 10vw 7vw 2vw 7vw;
+    }
+
+    #tornPaper .skills .skillsList h4 {
+        font-size: 1.5vw;
+        line-height: 1.7vw;
+        margin-bottom: 3vw;
+    }
+
+    #tornPaper .skills .skillsList h2 {
+        font-size: 2vw;
+    }
+
+    #tornPaper .skills .skillsList ul li {
+        font-weight: 900;
+        font-size: 1.5vw;
+    }
+
+    #tornPaper .skills .skillsList .skill ul {
+        opacity: 1;
+    }
+    /* ----------Skills Ends here---------- */
+
+    #tornPaper hr {
+        width: 80%;
+        margin: 0 0 0 10vw;
+    }
+
+    #tornPaper #feat .row1 {
+        padding: 4vw 10vw;
+    }
+
+    #tornPaper #feat .row1 h1 {
+        font-size: 7vw;
+    }
+
+    #tornPaper #feat .row1 h1 .tally {
+        font-size: 1.5vw;
+    }
+
+    #tornPaper #feat .row2 .images .firstimg a img {
+        height: 60vh;
+    }
+
+    #tornPaper #feat .row2 .images .secondimg {
+        width: 35vw;
+    }
+
+    #tornPaper #feat .row2 .images .secondimg a img:last-child {
+        height: 40vh;
+    }
+    /* ----------Torn Paper Ends here---------- */
+    /* ----------Home Ends here---------- */
+
+    /* ----------Footer Starts here---------- */
+    footer {
+        min-height: 50vh;
+    }
+
+    footer .message {
+        padding: 0 3vw;
+    }
+
+    footer .message h1 {
+        line-height: 7vw;
+        font-weight: 400;
+    }
+
+    /* ----------Goku Icon---------- */
+    footer .message .goku {
+        width: 15%;
+    }
+
+    /* ----------Message Button Starts here---------- */
+    footer .messageBtn {
+        width: 90%;
+    }
+
+    footer .messageBtn a {
+        padding: 2vw 0vw;
+        font-size: 4vw;
+        z-index: 9;
+    }
+    /* ----------Message Button Ends here---------- */
+
+    /* ----------Social Media Starts here---------- */
+    footer .social {
+        padding: 6vw;
+    }
+
+    footer .social .link {
+        padding: 0 0vw;
+    }
+
+    footer .social .link:hover {
+        padding: 0px 0.5vw;
+    }
+
+    footer .social .link .nameId p {
+        font-size: 1.3vw;
+    }
+    /* ----------Social Media Ends here---------- */
+
+    /* ----------Background Semi-Circle Icon---------- */
+    footer #circle {
+        top: 50%;
+        left: 65%;
+    }
+
+    /* ----------Copyright---------- */
+    footer .copyright {
+        font-size: 1.8vw;
+    }
+    /* ----------Footer Ends here---------- */
+}
+/* Media Query for Large Devices Ends here. */
