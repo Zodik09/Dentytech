@@ -132,6 +132,7 @@ body::-webkit-scrollbar {
     min-height: 150vh;
     background-color: #FCFAF8;
     font-family: var(--body-font-family);
+    position: relative;
 }
 
 /* ----------NavBar Starts here---------- */
@@ -146,7 +147,7 @@ body::-webkit-scrollbar {
 
 #nav a {
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 900;
     color: #4e4e4e;
     font-family: var(--body-font-family);
     position: relative;
@@ -269,6 +270,10 @@ body::-webkit-scrollbar {
     height: 8.5vw;
 }
 
+#hero>.timing {
+    display: none;
+}
+
 /* ----------Hero Section Ends here---------- */
 
 /* ----------Intro Starts here---------- */
@@ -284,6 +289,10 @@ body::-webkit-scrollbar {
     width: 40%;
     font-size: 0.887vw;
     color: #414141;
+}
+
+#home #intro .left img {
+    height: 15.835vw;
 }
 
 #home #intro .right {
@@ -321,6 +330,7 @@ body::-webkit-scrollbar {
 #home #intro .right img:nth-child(3) {
     transform: translate3d(12.668vw, 6.334vw, 0px) rotate(0deg);
 }
+
 /* ----------Intro Ends here---------- */
 
 /* ----------Torn Paper Starts here---------- */
@@ -407,6 +417,7 @@ body::-webkit-scrollbar {
     right: 0%;
     opacity: 0;
 }
+
 /* ----------Skills Ends here---------- */
 
 #tornPaper hr {
@@ -479,6 +490,7 @@ body::-webkit-scrollbar {
     height: 80vh;
     object-fit: cover;
 }
+
 /* ----------Torn Paper Ends here---------- */
 /* ----------Home Ends here---------- */
 
@@ -674,10 +686,12 @@ footer .copyright {
     align-items: center;
     padding: 2vw 5vw 0 5vw;
 }
+
 /* ----------Footer Ends here---------- */
 
 /* Media Query for Large Devices Starts here. */
 @media (769px < width < 1080px) {
+
     /* ----------Websites theme color and font family---------- */
     .themeTextColor {
         font-weight: 900;
@@ -708,6 +722,7 @@ footer .copyright {
     #nav a .line {
         height: 0.1vw;
     }
+
     /* ----------NavBar Ends here---------- */
 
     /* ----------Hero Section Starts here---------- */
@@ -737,6 +752,7 @@ footer .copyright {
     #hero .row2 #web {
         padding: 0px 4vw;
     }
+
     /* ----------Hero Section Ends here---------- */
 
     /* ----------Intro Starts here---------- */
@@ -767,6 +783,7 @@ footer .copyright {
     #home #intro .right img:nth-child(3) {
         transform: translate3d(10.668vw, 5.334vw, 0px) rotate(0deg);
     }
+
     /* ----------Intro Ends here---------- */
 
     /* ----------Torn Paper Starts here---------- */
@@ -806,6 +823,7 @@ footer .copyright {
     #tornPaper .skills .skillsList .skill ul {
         opacity: 1;
     }
+
     /* ----------Skills Ends here---------- */
 
     #tornPaper hr {
@@ -836,6 +854,7 @@ footer .copyright {
     #tornPaper #feat .row2 .images .secondimg a img:last-child {
         height: 40vh;
     }
+
     /* ----------Torn Paper Ends here---------- */
     /* ----------Home Ends here---------- */
 
@@ -868,6 +887,7 @@ footer .copyright {
         font-size: 4vw;
         z-index: 9;
     }
+
     /* ----------Message Button Ends here---------- */
 
     /* ----------Social Media Starts here---------- */
@@ -886,6 +906,7 @@ footer .copyright {
     footer .social .link .nameId p {
         font-size: 1.3vw;
     }
+
     /* ----------Social Media Ends here---------- */
 
     /* ----------Background Semi-Circle Icon---------- */
@@ -898,6 +919,139 @@ footer .copyright {
     footer .copyright {
         font-size: 1.8vw;
     }
+
     /* ----------Footer Ends here---------- */
 }
+
 /* Media Query for Large Devices Ends here. */
+
+/* Media Query for Small Devices Starts here. */
+@media (320px < width < 480px) {
+
+    /* ----------Display none property to hide the components in the small devices.---------- */
+    #nav a:nth-child(2),
+    #nav a:nth-child(3),
+    #hero .row1 .text,
+    #hero .row2 #downArrow {
+        display: none;
+    }
+
+    /* ----------Loader1 Starts here---------- */
+    #topheading h5 {
+        font-size: 2.5vw;
+        font-weight: 900;
+    }
+
+    #loader h1 {
+        font-size: 6.5vw;
+        font-weight: 900;
+    }
+
+    #loader .loading {
+        padding: 0 0 20vw 0;
+    }
+
+    /* ----------Loader1 Ends here---------- */
+
+    /* ----------Home Starts here---------- */
+    #nav a {
+        font-size: 3vw;
+    }
+
+    #nav a .line {
+        height: 0.3vw;
+    }
+
+    #nav a .line2 {
+        width: 98%;
+    }
+
+    /* ----------NavBar Ends here---------- */
+
+    /* ----------Hero Section Starts here---------- */
+    #hero {
+        width: 100%;
+        height: 30vh;
+        padding: 5vw 5vw;
+        justify-content: flex-start;
+    }
+
+    #hero .row1 h1,
+    #hero .row2 h1 {
+        font-size: 16vw;
+        width: 100%;
+    }
+
+    #hero .row2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #hero .row2 #web {
+        height: 15vw;
+    }
+
+    #hero .row2 img {
+        right: 20%;
+        top: -14%;
+        height: 25vw;
+    }
+
+    #hero>.timing {
+        width: 100%;
+        padding: 7vw 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 3vw;
+    }
+
+    /* ----------Intro Starts here---------- */
+    #home #intro {
+        padding: 17vw 5vw 10vw 5vw;
+        flex-direction: column-reverse;
+    }
+
+    #home #intro .nowrap {
+        white-space: nowrap;
+    }
+
+    #home #intro .left {
+        width: 100%;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    #home #intro .left img {
+        height: 50vw;
+    }
+
+    #home #intro .right {
+        width: 100%;
+        min-height: 20vh;
+    }
+
+    #home #intro .right img {
+        height: 90vw;
+        top: 20%;
+        left: 10%;
+        border-radius: 9vw;
+    }
+
+    #home #intro .right img:nth-child(1) {
+        transform: translate3d(-8vw, -19.334vw, 0px) rotate(5deg);
+    }
+
+    #home #intro .right img:nth-child(2) {
+        transform: translate3d(4vw, 0px, 0px) rotate(10deg);
+    }
+
+    #home #intro .right img:nth-child(3) {
+        transform: translate3d(16vw, 19.334vw, 0px) rotate(15deg);
+    }
+    /* ----------Intro Ends here---------- */
+}
+
+/* Media Query for Small Devices Ends here. */
