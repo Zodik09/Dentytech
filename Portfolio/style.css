@@ -75,7 +75,7 @@ body::-webkit-scrollbar {
     pointer-events: none;
     top: 0%;
     font-family: var(--body-font-family);
-    z-index: 99;
+    z-index: 999;
     scroll-behavior: smooth;
 }
 
@@ -121,7 +121,7 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 0vh;
     background-image: var(--loader2-clr);
-    z-index: 99;
+    z-index: 998;
 }
 
 /* ----------Loader2 Starts here---------- */
@@ -932,7 +932,10 @@ footer .copyright {
     #nav a:nth-child(2),
     #nav a:nth-child(3),
     #hero .row1 .text,
-    #hero .row2 #downArrow {
+    #hero .row2 #downArrow,
+    footer .message svg,
+    footer .message .think,
+    footer .message .goku {
         display: none;
     }
 
@@ -950,7 +953,6 @@ footer .copyright {
     #loader .loading {
         padding: 0 0 20vw 0;
     }
-
     /* ----------Loader1 Ends here---------- */
 
     /* ----------Home Starts here---------- */
@@ -965,7 +967,6 @@ footer .copyright {
     #nav a .line2 {
         width: 98%;
     }
-
     /* ----------NavBar Ends here---------- */
 
     /* ----------Hero Section Starts here---------- */
@@ -1010,7 +1011,7 @@ footer .copyright {
 
     /* ----------Intro Starts here---------- */
     #home #intro {
-        padding: 17vw 5vw 10vw 5vw;
+        padding: 10vw 5vw 20vw 5vw;
         flex-direction: column-reverse;
     }
 
@@ -1052,6 +1053,181 @@ footer .copyright {
         transform: translate3d(16vw, 19.334vw, 0px) rotate(15deg);
     }
     /* ----------Intro Ends here---------- */
-}
 
+    /* ----------Torn Paper Starts here---------- */
+    #tornPaper {
+        padding-bottom: 15vw;
+    }
+
+    #tornPaper::before {
+        height: 20vh;
+        top: -5%;
+    }
+
+    /* ----------Skills Starts here---------- */
+    #tornPaper .skills {
+        padding: 10vw 5vw 2vw 5vw;
+    }
+
+    #tornPaper .skills .skillsList h4 {
+        font-size: 3vw;
+        line-height: 3vw;
+        margin-bottom: 6vw;
+    }
+
+    #tornPaper .skills .skillsList h2 {
+        line-height: 4vw;
+        font-size: 5vw;
+        white-space: nowrap;
+        letter-spacing: -0.3vw;
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    #tornPaper .skills .skillsList ul li {
+        font-weight: 600;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+
+    #tornPaper .skills .skillsList .skill1,
+    #tornPaper .skills .skillsList .skill2,
+    #tornPaper .skills .skillsList .skill3,
+    #tornPaper .skills .skillsList .skill4,
+    #tornPaper .skills .skillsList .skill5 {
+        line-height: 3vw;
+    }
+
+    #tornPaper .skills .skillsList .skill ul {
+        display: block;
+        position: static;
+        margin-bottom: 2vw;
+        opacity: 1;
+    }
+    /* ----------Skills Ends here---------- */
+
+    #tornPaper #feat .row1 {
+        padding: 10vw 12vw 5vw 12vw;
+    }
+
+    #tornPaper #feat .row1 h1 .tally {
+        font-size: 3vw;
+    }
+
+    .arrow {
+        fill: rgb(0, 0, 0);
+    }
+
+    #tornPaper #feat .row2 .images {
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    #tornPaper #feat .row2 .images .firstimg {
+        width: 80vw;
+        border-radius: 4vw;
+    }
+
+    #tornPaper #feat .row2 .images .firstimg a img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #tornPaper #feat .row2 .images .secondimg {
+        width: 80vw;
+        border-radius: 4vw;
+    }
+
+    #tornPaper #feat .row2 .images .secondimg a img:last-child {
+        height: 80vw;
+    }
+
+    /* ----------Torn Paper Ends here---------- */
+    /* ----------Home Ends here---------- */
+
+    /* ----------Footer Starts here---------- */
+    footer {
+        min-height: 50vh;
+        padding: 5vw 2vw;
+    }
+
+    footer .message h1 {
+        font-size: 9vw;
+        line-height: 10vw;
+    }
+
+
+    /* ----------Message Button Starts here---------- */
+    footer .messageBtn {
+        width: 90%;
+        margin: 5vw auto;
+    }
+
+    footer .messageBtn a {
+        padding: 5vw 8vw;
+        font-size: 5vw;
+        font-weight: 900;
+    }
+    /* ----------Message Button Ends here---------- */
+
+    /* ----------Social Media Starts here---------- */
+    footer .social {
+        flex-direction: column;
+        padding: 5vw;
+    }
+
+    footer .social .link {
+        width: 90%;
+        padding: 5vw 2vw;
+        height: 15vw;
+        margin-bottom: 2vw;
+    }
+
+    footer .social .link:hover {
+        padding: 0px 3vw;
+    }
+
+    footer .social .link:hover::before {
+        height: 110%;
+    }
+
+
+    footer .social .link .nameId {
+        line-height: 5vw;
+    }
+
+    footer .social .link .nameId h2 {
+        font-size: 5vw;
+        width: 50vw;
+    }
+
+    footer .social .link .nameId p {
+        font-size: 3vw;
+        width: 50vw;
+    }
+
+    footer .social svg {
+        height: 6vw;
+    }
+    /* ----------Social Media Ends here---------- */
+
+    /* ----------Background Semi-Circle Icon---------- */
+    footer #circle {
+        bottom: -35%;
+        left: 124%;
+        transform: translate(0, 0%);
+    }
+
+    /* ----------Copyright---------- */
+    footer .copyright {
+        font-size: 3vw;
+        white-space: nowrap;
+        flex-direction: column;
+        text-align: left;
+        padding: 2vw 5vw 0 5vw;
+    }
+    /* ----------Footer Ends here---------- */
+}
 /* Media Query for Small Devices Ends here. */
