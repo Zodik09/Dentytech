@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
 #loader .loading img {
     width: 3vw;
     height: 3vw;
-    animation: rotate 1s linear infinite;
+    animation: rotate 1.5s linear infinite;
 }
 
 @keyframes rotate {
@@ -724,7 +724,12 @@ footer .copyright {
     }
 
     #loader .loading {
-        padding: 0 0 8vw 0;
+        padding: 0 0 15vw 0;
+    }
+
+    #loader .loading img {
+        width: 5vw;
+        height: 5vw;
     }
 
     /* ----------Loader1 Ends here---------- */
@@ -967,6 +972,11 @@ footer .copyright {
 
     #loader .loading {
         padding: 0 0 20vw 0;
+    }
+
+    #loader .loading img {
+        width: 10vw;
+        height: 10vw;
     }
 
     /* ----------Loader1 Ends here---------- */
