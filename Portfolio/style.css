@@ -946,7 +946,7 @@ footer .copyright {
 /* Media Query for Large Devices Ends here. */
 
 /* Media Query for Small Devices Starts here. */
-@media (320px < width < 480px) {
+@media (0px < width < 480px) {
 
     /* ----------Display none property to hide the components in the small devices.---------- */
     #nav a:nth-child(2),
