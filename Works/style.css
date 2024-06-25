@@ -43,7 +43,7 @@ body {
   width: 100vw;
   /* height: 10vh; */
   padding: 30px 60px;
-  position: absolute;
+  position: fixed;
   top: 0%;
   z-index: 4;
   display: flex;
@@ -168,6 +168,7 @@ svg {
 #rightNav > svg {
   width: 26px;
   height: 26px;
+  stroke: blueviolet
 }
 a {
   color: #000000;
