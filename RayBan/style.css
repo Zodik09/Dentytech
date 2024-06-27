@@ -13,6 +13,9 @@ body {
   font-family: "Rajdhani", sans-serif;
   overflow: hidden;
 }
+#container{
+  display: initial;
+}
 #bottom {
   width: 100%;
   height: 100%;
@@ -115,4 +118,96 @@ nav img {
 }
 #mainright p:last-child {
   margin-top: 5vh;
+}
+#message{
+  display: none;
+}
+
+@media (1025px < width < 1200px){
+  #container{
+    display: none;
+  }
+  #message{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(210, 210, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #message h2{
+    font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    color: blue;
+  }
+}
+
+/* Media Query for Large Devices. */
+@media (769px < width < 1024px) {
+	#container{
+    display: none;
+  }
+  #message{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(193, 255, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #message h2{
+    font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    color: green;
+  }
+}
+/* Media Query for Medium Devices. */
+@media (481px < width < 768px) {
+  #container{
+    display: none;
+  }
+  #message{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 197, 197);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #message h2{
+    font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    color: rgb(255, 0, 0);
+  }
+}
+/* Media Query for Small Devices. */
+@media (0px < width < 480px) {
+  #container{
+    display: none;
+  }
+  #message{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 208, 208);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #message h2{
+    font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    color: rgb(255, 0, 0);
+  }
 }
